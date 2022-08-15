@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: nginx:1.21.6-alpine
+        image: alpine:3.16.2
         imagePullPolicy: IfNotPresent
         command: ["/bin/sh"]
         args: ["-c", "while true; do sleep 1; done"]
