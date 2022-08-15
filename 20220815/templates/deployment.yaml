@@ -19,8 +19,8 @@ spec:
       - name: hello-world
         image: nginx:1.21.6-alpine
         imagePullPolicy: IfNotPresent
-        command: ["nginx"]
-        args: ["-g", "daemon off;"]
+        command: ["tail"]
+        args: ["-f", "/dev/null"]
         ports:
         - containerPort: 80
         resources:
