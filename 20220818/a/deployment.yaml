@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-util
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      srv: dev-util
+  template:
+    metadata:
+      labels:
+        srv: dev-util
+    spec:
+      containers:
+      - name: dev-util
+        image: bitnami/kubectl:1.21
+        imagePullPolicy: IfNotPresent
+        command:
+        - /bin/bash
+        - -c
+        - while true; do sleep 1; done
