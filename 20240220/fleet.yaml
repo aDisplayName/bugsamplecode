@@ -1,6 +1,6 @@
-defaultNamespace: ver1
+defaultNamespace: ver2
 
 helm:
-  releaseName: release1
+  releaseName: release2
 
   
