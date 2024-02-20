@@ -1,0 +1,8 @@
+# Config map defining the edge os libraries used 
+# by both installer and app manager server.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: data-1
+data:
+  key1: value1

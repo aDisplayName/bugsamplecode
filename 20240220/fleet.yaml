@@ -1,0 +1,6 @@
+defaultNamespace: ver1
+
+helm:
+  releaseName: release1
+
+  
