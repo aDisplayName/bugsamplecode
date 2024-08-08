@@ -1,0 +1,14 @@
+defaultNamespace: cert-manager
+
+labels:
+  app: cert-manager
+
+helm:
+  repo: https://charts.jetstack.io
+  chart: cert-manager
+  version: v1.15.2
+  releaseName: cert-manager
+  takeOwnership: true
+  values:
+    crds:
+      enabled: true

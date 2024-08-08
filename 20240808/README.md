@@ -1,0 +1,1 @@
+Sample code for issue https://github.com/rancher/fleet/issues/2716
