@@ -1,0 +1,4 @@
+defaultNamespace: app-241003-polling
+
+helm:
+  releaseName: app-241003-polling

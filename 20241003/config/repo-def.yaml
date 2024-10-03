@@ -1,0 +1,42 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: w-polling
+  namespace: fleet-default
+spec:
+  # pollingInterval: # default polling 15s is used
+  branch: pr/20241003
+  insecureSkipTLSVerify: false
+  paths:
+  - /20241003/content/w-polling
+  repo: https://github.com/aDisplayName/bugsamplecode.git
+  correctDrift:
+    enabled: true
+  targets:
+  - name: target
+    clusterSelector:
+      matchLabels:
+        bugtarget: "true"
+
+
+---
+
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: w-webhook
+  namespace: fleet-default
+spec:
+  pollingInterval: "24h0m0s" # practically disable the job.
+  branch: pr/20241003
+  insecureSkipTLSVerify: false
+  correctDrift:
+    enabled: true
+  paths:
+  - /20241003/content/w-webhook
+  repo: https://github.com/aDisplayName/bugsamplecode.git
+  targets:
+  - name: target
+    clusterSelector:
+      matchLabels:
+        bugtarget: "true"
