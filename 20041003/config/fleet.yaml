@@ -1,0 +1,4 @@
+defaultNamespace: fleet-local
+
+helm:
+  releaseName: bug-multiple-fleet-jobs
