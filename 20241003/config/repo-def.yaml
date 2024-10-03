@@ -28,12 +28,12 @@ metadata:
   namespace: fleet-default
 spec:
   pollingInterval: "24h0m0s" # practically disable the job.
-  branch: pr/20241003/w-webhook
+  branch: pr/20241003
   insecureSkipTLSVerify: false
   correctDrift:
     enabled: true
   paths:
-  - /20241003/content
+  - /20241003/content/w-webhook
   repo: https://github.com/aDisplayName/bugsamplecode.git
   targets:
   - name: target
