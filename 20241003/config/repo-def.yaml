@@ -21,7 +21,7 @@ metadata:
   name: w-webhook
   namespace: fleet-default
 spec:
-  pollingInterval: 86400 # practically disable the job.
+  pollingInterval: "86400" # practically disable the job.
   branch: pr/20241003
   insecureSkipTLSVerify: false
   paths:
