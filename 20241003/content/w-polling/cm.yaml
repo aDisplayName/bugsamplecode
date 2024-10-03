@@ -4,3 +4,4 @@ metadata:
   name: my-map
 data:
   key: value
+  key2: "added"
