@@ -8,8 +8,10 @@ spec:
   branch: pr/20241003
   insecureSkipTLSVerify: false
   paths:
-  - /20241003/content
+  - /20241003/content/w-polling
   repo: https://github.com/aDisplayName/bugsamplecode.git
+  correctDrift:
+    enabled: true
   targets:
   - name: target
     clusterSelector:
@@ -26,8 +28,10 @@ metadata:
   namespace: fleet-default
 spec:
   pollingInterval: "24h0m0s" # practically disable the job.
-  branch: pr/20241003
+  branch: pr/20241003/w-webhook
   insecureSkipTLSVerify: false
+  correctDrift:
+    enabled: true
   paths:
   - /20241003/content
   repo: https://github.com/aDisplayName/bugsamplecode.git
