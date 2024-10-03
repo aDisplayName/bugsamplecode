@@ -10,7 +10,11 @@ spec:
   paths:
   - /20241003/content
   repo: https://github.com/aDisplayName/bugsamplecode.git
-  targets: []
+  targets:
+  - name: target
+    clusterSelector:
+      matchLabels:
+        bugtarget: "true"
 
 
 ---
@@ -27,4 +31,8 @@ spec:
   paths:
   - /20241003/content
   repo: https://github.com/aDisplayName/bugsamplecode.git
-  targets: []
+  targets:
+  - name: target
+    clusterSelector:
+      matchLabels:
+        bugtarget: "true"
