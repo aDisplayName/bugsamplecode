@@ -5,3 +5,4 @@ metadata:
 data:
   key: value
   key2: "added"
+  key3: "added"
