@@ -1,4 +1,6 @@
-﻿@page "/counter"
+﻿@page "/counter2"
+@using Microsoft.FluentUI.AspNetCore.Components
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
 
 <PageTitle>Counter</PageTitle>
 
@@ -8,8 +10,11 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+<FluentLabel>@_checked</FluentLabel>
+<InputCheckbox @bind-Value="_checked">data</InputCheckbox>
 @code {
     private int currentCount = 0;
+    private bool _checked = false;
 
     private void IncrementCount()
     {
